@@ -753,7 +753,7 @@
       <workItem from="1557996941638" duration="865000" />
       <workItem from="1559006618793" duration="11776000" />
       <workItem from="1559268338482" duration="6578000" />
-      <workItem from="1559617358910" duration="5955000" />
+      <workItem from="1559617358910" duration="5969000" />
     </task>
     <task id="LOCAL-00001" summary="add 商品评价">
       <created>1559269218515</created>
@@ -783,11 +783,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559633910073</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add 自动生成">
+      <created>1559638342260</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559638342260</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112992000" />
+    <option name="totallyTimeSpent" value="113006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -826,7 +833,8 @@
     <MESSAGE value="add 商品评价" />
     <MESSAGE value="add 申请退款完成" />
     <MESSAGE value="add 优惠券功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 优惠券功能" />
+    <MESSAGE value="add 自动生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 自动生成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
