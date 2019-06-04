@@ -50,6 +50,10 @@ class CloseOrder implements ShouldQueue
                 $item->productSku->addStock($item->amount);
             }
 
+            if ($this->order->couponCode) {
+                $this->order->couponCode->changeUsed(false);
+            }
+
         });
     }
 }
