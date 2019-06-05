@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="48896112-df9f-4bc8-93fb-fa50f5d3ab0e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -729,7 +728,7 @@
       <workItem from="1557996941638" duration="865000" />
       <workItem from="1559006618793" duration="11776000" />
       <workItem from="1559268338482" duration="6578000" />
-      <workItem from="1559617358910" duration="7643000" />
+      <workItem from="1559617358910" duration="7794000" />
     </task>
     <task id="LOCAL-00001" summary="add 商品评价">
       <created>1559269218515</created>
@@ -780,11 +779,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559698745621</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add 类目seeder文件">
+      <created>1559700339410</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559700339410</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114680000" />
+    <option name="totallyTimeSpent" value="114831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -826,7 +832,8 @@
     <MESSAGE value="add 自动生成" />
     <MESSAGE value="add 数据填充" />
     <MESSAGE value="add 初始化类目模型" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 初始化类目模型" />
+    <MESSAGE value="add 类目seeder文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 类目seeder文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
