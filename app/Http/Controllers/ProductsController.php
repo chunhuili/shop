@@ -6,13 +6,14 @@ use App\Exceptions\InvalidRequestException;
 use App\Models\Category;
 use App\Models\OrderItem;
 use App\Models\Product;
+use App\Services\CategoryService;
 use Illuminate\Http\Request;
 use Mockery\Exception;
 use Symfony\Component\Process\Process;
 
 class ProductsController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, CategoryService $categoryService)
     {
         //查询构造器
         $builder = Product::query()->where('on_sale',true);
@@ -66,6 +67,8 @@ class ProductsController extends Controller
             ],
             // 等价于 isset($category) ? $category : null
             'category' => $category ?? null,
+            // 将类目树传递给模板文件
+            'categoryTree' => $categoryService->getCategoryTree(),
         ]);
     }
 
