@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48896112-df9f-4bc8-93fb-fa50f5d3ab0e" name="Default" comment="add 类目seeder文件">
+    <list default="true" id="48896112-df9f-4bc8-93fb-fa50f5d3ab0e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/Controllers/CategoriesController.php" afterPath="$PROJECT_DIR$/app/Admin/Controllers/CategoriesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/routes.php" afterPath="$PROJECT_DIR$/app/Admin/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/admin.sql" afterPath="$PROJECT_DIR$/database/admin.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +59,8 @@
       <file leaf-file-name="admin.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/admin.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="96">
+              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -753,7 +750,7 @@
       <workItem from="1557996941638" duration="865000" />
       <workItem from="1559006618793" duration="11776000" />
       <workItem from="1559268338482" duration="6578000" />
-      <workItem from="1559617358910" duration="8320000" />
+      <workItem from="1559617358910" duration="8413000" />
     </task>
     <task id="LOCAL-00001" summary="add 商品评价">
       <created>1559269218515</created>
@@ -818,11 +815,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559700485870</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add 商品类目后台管理">
+      <created>1559701327330</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559701327330</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115357000" />
+    <option name="totallyTimeSpent" value="115450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -865,7 +869,8 @@
     <MESSAGE value="add 数据填充" />
     <MESSAGE value="add 初始化类目模型" />
     <MESSAGE value="add 类目seeder文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 类目seeder文件" />
+    <MESSAGE value="add 商品类目后台管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 商品类目后台管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1172,8 +1177,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/admin.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        <state relative-caret-position="96">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding />
         </state>
       </provider>
