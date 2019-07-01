@@ -48,7 +48,7 @@ class Installment extends Model
         return $this->hasMany(InstallmentItem::class);
     }
 
-    public function findAvailableNo()
+    public static function findAvailableNo()
     {
         //分期流水号前缀
         $prefix = date('YmsHis');
