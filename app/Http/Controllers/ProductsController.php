@@ -8,6 +8,7 @@ use App\Models\OrderItem;
 use App\Models\Product;
 use App\SearchBuilders\ProductSearchBuilder;
 use App\Services\CategoryService;
+use App\Services\ProductService;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Mockery\Exception;
@@ -69,9 +70,10 @@ class ProductsController extends Controller
         $productIds = collect($result['hits']['hits'])->pluck('_id')->all();
         // 通过 whereIn 方法从数据库中读取商品数据
         $products = Product::query()
-            ->whereIn('id',$productIds)
-            // orderByRaw 可以让我们用原生的 SQL 来给查询结果排序
-            ->orderByRaw(sprintf("FIND_IN_SET(id, '%s')", join(',', $productIds)))
+            ->byIds($productIds)
+//            ->whereIn('id',$productIds)
+//            // orderByRaw 可以让我们用原生的 SQL 来给查询结果排序
+//            ->orderByRaw(sprintf("FIND_IN_SET(id, '%s')", join(',', $productIds)))
             ->get();
         // 返回一个 LengthAwarePaginator 对象
         $pager = new LengthAwarePaginator($products, $result['hits']['total'], $perPage, $page,
@@ -112,7 +114,7 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function show(Product $product,Request $request)
+    public function show(Product $product,Request $request,ProductService $service)
     {
         if (!$product->on_sale) {
             throw new InvalidRequestException('商品未上架');
@@ -132,8 +134,14 @@ class ProductsController extends Controller
             ->orderBy('reviewed_at', 'desc') // 按评价时间倒序
             ->limit(10) // 取出 10 条
             ->get();
+        $similarProductIds = $service->getSimilarProductIds($product,4);
+        // 根据 Elasticsearch 搜索出来的商品 ID 从数据库中读取商品数据
+        $similarProducts = Product::query()->byIds($similarProductIds)->get();
+//            ->whereIn('id', $similarProductIds)
+//            ->orderByRaw(sprintf("FIND_IN_SET(id, '%s')", join(',', $similarProductIds)))
+//            ->get();
 
-        return view('products.show',['product' => $product,'favored' => $favored,'reviews' => $reviews]);
+        return view('products.show',['product' => $product,'favored' => $favored,'reviews' => $reviews,'similar'=>$similarProducts ]);
     }
 
     public function favor(Product $product, Request $request)
