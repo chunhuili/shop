@@ -10,7 +10,7 @@ return [
     /*
      * 页面顶部 Logo
      */
-    'logo' => '<b>Laravel</b> Shop',
+    'logo' => '<b>蜜界</b>',
 
     /*
      * 页面顶部小 Logo
@@ -37,7 +37,7 @@ return [
     /*
      * Laravel-Admin 页面标题
      */
-    'title' => 'Laravel Shop 管理后台',
+    'title' => '蜜界管理后台',
 
     /*
      * 是否使用 https

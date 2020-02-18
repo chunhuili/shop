@@ -64,22 +64,22 @@ class ProductsController extends Controller
             }
         }
 
-        $result = app('es')->search($builder->getParams());
+//        $result = app('es')->search($builder->getParams());
 
         //通过collect函数将返回结果转为集合，并通过集合的pluck方法取到返回商品ID数组
-        $productIds = collect($result['hits']['hits'])->pluck('_id')->all();
+//        $productIds = collect($result['hits']['hits'])->pluck('_id')->all();
         // 通过 whereIn 方法从数据库中读取商品数据
-        $products = Product::query()
-            ->byIds($productIds)
+//        $products = Product::query()
+//            ->byIds($productIds)
 //            ->whereIn('id',$productIds)
 //            // orderByRaw 可以让我们用原生的 SQL 来给查询结果排序
 //            ->orderByRaw(sprintf("FIND_IN_SET(id, '%s')", join(',', $productIds)))
-            ->get();
+//            ->get();
         // 返回一个 LengthAwarePaginator 对象
-        $pager = new LengthAwarePaginator($products, $result['hits']['total'], $perPage, $page,
-            [
-                'path' => route('products.index',false),
-            ]);
+//        $pager = new LengthAwarePaginator($products, $result['hits']['total'], $perPage, $page,
+//            [
+//                'path' => route('products.index',false),
+//            ]);
 
 
         $properties = [];
@@ -100,7 +100,8 @@ class ProductsController extends Controller
         }
 
         return view('products.index',[
-            'products' => $pager,
+//            'products' => $pager,
+            'products' => '',
             'filters' => [
                 'search' => '',
                 'order' => $order
