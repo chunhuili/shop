@@ -42,4 +42,18 @@ Route::group([
     $router->post('crowdfunding_products', 'CrowdfundingProductsController@store');
     $router->get('crowdfunding_products/{id}/edit', 'CrowdfundingProductsController@edit');
     $router->put('crowdfunding_products/{id}', 'CrowdfundingProductsController@update');
+
+    /** 收益路由 */
+    $router->get('profit', 'ProfitController@index');
+
+    $router->get('profit_set', 'ProfitSetController@index');
+    $router->get('profit_set/create', 'ProfitSetController@create');
+    $router->get('profit_set/{id}/edit', 'ProfitSetController@edit');
+    $router->post('profit_set', 'ProfitSetController@store');
+    $router->put('profit_set/{id}', 'ProfitSetController@update');
+    $router->delete('profit_set/{id}', 'ProfitSetController@destroy');
+
+    /** 评价信息 */
+    $router->get('evaluate', 'ProductEvaluateController@index');
+
 });
